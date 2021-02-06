@@ -26,11 +26,13 @@
 ;; To find shell-history, you can use `M-x helm-shell-history' command
 
 ;;; Preference setting:
-;; (add-to-list 'load-path "path/to/this/package")
-;; (require 'helm-shell-history)
-;; (add-hook 'term-mode-hook
+;; (use-package 'helm-shell-history
+;; 		:ensure t
+;; 		:config
+;; 		(setq helm-shell-history-file "~/.zsh_history")
+;; 		(add-hook 'shell-mode-hook
 ;;           (lambda ()
-;;             (define-key term-raw-map (kbd "C-r") 'helm-shell-history)))
+;;             (define-key shell-mode-map [M-r] 'helm-shell-history))))
 ;;; Code:
 (require 'helm)
 (require 'term nil t)
