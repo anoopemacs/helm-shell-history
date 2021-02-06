@@ -32,7 +32,7 @@
 ;; 		(setq helm-shell-history-file "~/.zsh_history")
 ;; 		(add-hook 'shell-mode-hook
 ;;           (lambda ()
-;;             (define-key shell-mode-map [M-r] 'helm-shell-history))))
+;;             (define-key shell-mode-map (kbd "M-r") 'helm-shell-history))))
 ;;; Code:
 (require 'helm)
 (require 'term nil t)
