@@ -1,12 +1,12 @@
-;;; helm-shell-history.el --- find shell history from helm -*- lexical-binding: t; -*-
+;;; helm-shell-history.el --- Find shell history from helm -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2012, 2015 by Yuta Yamada
 
 ;; Author: Yuta Yamada <cokesboy"at"gmail.com>
 ;; URL: https://github.com/yuutayamada/helm-shell-history
 ;; Version: 0.0.1
-;; Package-Requires: ((helm "20130208.1156"))
-;; Keywords: helm
+;; Package-Requires: ((helm "20210205.1507") (emacs "24.3"))
+;; Keywords: helm terminals shell
 
 ;;; License:
 ;; This program is free software: you can redistribute it and/or modify
