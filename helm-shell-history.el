@@ -59,7 +59,7 @@ By default it is specified variable of $HISTFILE")
            collect (concat cmd " \"" search-word "\" ") into result
            finally return (mapconcat 'identity result " | ")))
 
-(defvar helm-c-shell-history
+(defvar helm-shell-history-c-shell-history
   '((name . "helm-shell-history")
     (candidates-process . (lambda ()
                             (start-process
@@ -83,7 +83,7 @@ By default it is specified variable of $HISTFILE")
   "Display command line history from history file.
 You can specify at `helm-shell-history-file'."
   (interactive)
-  (helm :sources helm-c-shell-history
+  (helm :sources helm-shell-history-c-shell-history
         :prompt "shell command: "
         :buffer "*helm shell history*"))
 
