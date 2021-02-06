@@ -5,24 +5,26 @@ Overview
 ------------
 Find shell history by helm
 
-<!-- ## how to install(Emacs 24 User) -->
-<!-- You can install from M-x `list-packages' command. -->
-
-<!-- ## how to install(otherwise) -->
 ## Installation
-You can install that is used git:
+You can install this using use-package:
 
-    mkdir -p ~/.emacs.d/packages/
-    cd ~/.emacs.d/packages/
-    git clone https://github.com/emacsmirror/helm-shell-history.git
+    (use-package 'helm-shell-history
+		:ensure t)
     
-## Configuration for Emacs
-below code is example for multi-term.el
+## Example configuration
+Ensure that (getenv "HISTFILE") points to your shell's the history file. Eg: ~/.bash_history or ~/.zsh_history
+Else, explicitly set the history file location by setting the variable helm-shell-history-file
 
-   (require 'helm-shell-history)
-   (add-hook 'term-mode-hook
-             (lambda ()
-               (define-key term-raw-map (kbd "C-r") 'helm-shell-history)))
+You may set a keybinding to invoke helm-shell-history when inside an emacs shell
+
+    (use-package 'helm-shell-history
+		:ensure t
+		:config
+		(setq helm-shell-history-file "~/.zsh_history")
+		(add-hook 'shell-mode-hook
+          (lambda ()
+            (define-key shell-mode-map [M-r] 'helm-shell-history))))
 
 ## License
 This is GNU General Public License. see <http://www.gnu.org/licenses/>
+The original author of this repo is yuutayamada and all credits go to him.
