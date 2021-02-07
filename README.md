@@ -6,7 +6,13 @@ Overview
 Find shell history by helm
 
 ## Installation
-You can install this using use-package:
+You can install this using git:
+
+    mkdir -p ~/.emacs.d/packages/
+    cd ~/.emacs.d/packages/
+    git clone https://github.com/emacsmirror/helm-shell-history.git
+
+You can also install this using use-package:
 
     (use-package 'helm-shell-history
 		:ensure t)
@@ -27,4 +33,3 @@ You may set a keybinding to invoke helm-shell-history when inside an emacs shell
 
 ## License
 This is GNU General Public License. see <http://www.gnu.org/licenses/>
-The original author of this repo is yuutayamada and all credits go to him.
