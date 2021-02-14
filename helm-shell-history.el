@@ -48,7 +48,7 @@ By default it is specified variable of $HISTFILE")
     (let* ((patterns (split-string pattern))
            (grep (when (string< "" pattern)
                    (helm-shell-history-make-grep-command patterns))))
-      (mapconcat 'identity (delq nil
+      (mapconcat #'identity (delq nil
                                  `(,(concat "\\tac " helm-shell-history-file)
                                    ,grep
                                    "\\sed 's/^: [0-9]*:[0-9];//'"))
@@ -59,7 +59,7 @@ By default it is specified variable of $HISTFILE")
   (cl-loop with cmd = "\\grep -E -e "
            for search-word in patterns
            collect (concat cmd " \"" search-word "\" ") into result
-           finally return (mapconcat 'identity result " | ")))
+           finally return (mapconcat #'identity result " | ")))
 
 (defvar helm-shell-history-c-shell-history
   '((name . "helm-shell-history")
