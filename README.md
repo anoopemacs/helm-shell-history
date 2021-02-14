@@ -30,6 +30,3 @@ You may set a keybinding to invoke helm-shell-history when inside an emacs shell
 		(add-hook 'shell-mode-hook
           (lambda ()
             (define-key shell-mode-map [M-r] 'helm-shell-history))))
-
-## License
-This is GNU General Public License. see <http://www.gnu.org/licenses/>
