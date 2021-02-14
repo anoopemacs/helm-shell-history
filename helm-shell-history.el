@@ -5,7 +5,7 @@
 ;; Author: Yuta Yamada <cokesboy"at"gmail.com>
 ;; URL: https://github.com/yuutayamada/helm-shell-history
 ;; Version: 0.0.1
-;; Package-Requires: ((helm "20210205.1507") (emacs "24.3"))
+;; Package-Requires: ((helm "3.7") (emacs "24.3"))
 ;; Keywords: helm terminals shell
 
 ;;; License:
